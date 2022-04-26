@@ -5,15 +5,19 @@ let currentShape = 'cross';
 function fillShape(id) { //um id zu übergeben
     if(currentShape == 'cross') {
         currentShape = 'circle';
+        document.getElementById('player-1').classList.remove('player-inactive');
+        document.getElementById('player-2').classList.add('player-inactive');
     } else {
         currentShape = 'cross';
+        document.getElementById('player-1').classList.add('player-inactive');
+        document.getElementById('player-2').classList.remove('player-inactive');
     }
     fields[id] = currentShape;     //um fields den ID zuweisen zu können
     console.log(fields);
     draw();
 }
 
-function draw() {
+function draw() { // circle oder cross 
     for(let i = 0; i < fields.length; i++) {
         if(fields[i] == 'circle'){
             document.getElementById('circle-' + i).classList.remove('d-none');
