@@ -3,9 +3,10 @@ let fields = [];
 let currentShape = 'cross';
 
 function fillShape(id) { //um id zu übergeben
+    if(!fields[id]){ //damit ein Feld nicht zweimal geklickt werden kann --- "!" --- um das ganze zu negieren!
     if(currentShape == 'cross') {
         currentShape = 'circle';
-        document.getElementById('player-1').classList.remove('player-inactive');
+        document.getElementById('player-1').classList.remove('player-inactive');// player switch optisch im panel
         document.getElementById('player-2').classList.add('player-inactive');
     } else {
         currentShape = 'cross';
@@ -15,6 +16,7 @@ function fillShape(id) { //um id zu übergeben
     fields[id] = currentShape;     //um fields den ID zuweisen zu können
     console.log(fields);
     draw();
+}
 }
 
 function draw() { // circle oder cross 
