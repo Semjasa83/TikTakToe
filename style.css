@@ -75,3 +75,21 @@ tr td:last-child {
 .d-none {
     display: none;
 }
+
+.container {
+    position: relative;
+}
+
+.horizontal-line {
+    height: 10px;
+    width: 410px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.vertical-line {
+    height: 410px;
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
