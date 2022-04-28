@@ -6,6 +6,8 @@ body {
     flex-direction: column;
 }
 
+/* Player Ansicht */
+
 .player-panel {
     display: flex;
     font-size: 32px;
@@ -27,6 +29,8 @@ body {
 .player-inactive{
     opacity: 0.5;
 }
+
+/* Spielfeld */
 
 table {
     border-collapse: collapse;
@@ -72,6 +76,8 @@ tr td:last-child {
     right: 0;
 }
 
+/* Hilfsklassen */
+
 .d-none {
     display: none;
 }
@@ -79,6 +85,8 @@ tr td:last-child {
 .container {
     position: relative;
 }
+
+/* Linien für Sieg */
 
 .horizontal-line {
     height: 10px;
@@ -93,11 +101,14 @@ tr td:last-child {
     transform: rotate(90deg) scaleX(0.0);
 }
 
+/* Game Over Screen */
+
 .game-over-popup {
     position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
+    left: 50;
+    right: 50;
+    width: 600px;
+    height: 600px;
     height: auto;
     z-index: 3;
     animation: zoomIn 500ms ease-in-out;
@@ -113,4 +124,23 @@ tr td:last-child {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Restart Button */
+
+.restart-btn {
+    position: absolute;
+    bottom: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: rgba(25, 221, 0, 0.2);
+    border-radius: 4px;
+    font-size: 24px;
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.restart-btn:hover {
+    background-color: rgba(25, 221, 0, 0.4);
 }
