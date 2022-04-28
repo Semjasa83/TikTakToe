@@ -21,6 +21,21 @@ function fillShape(id) { //um id zu übergeben
 }
 }
 
+function restart() {
+    gameOver = false;
+    fields = [];
+    document.getElementById('game-over').classList.add('d-none');
+    document.getElementById('restart-btn').classList.add('d-none');
+    
+    for (let index = 1; index < 8; index++) {
+        document.getElementById('line-' + index).classList.add('d-none');
+    }
+    for (let index = 0; index < 9; index++) {
+        document.getElementById('circle-' + index).classList.add('d-none');
+        document.getElementById('cross-' + index).classList.add('d-none');
+    }
+}
+
 function draw() { // circle oder cross 
     for(let i = 0; i < fields.length; i++) {
         if(fields[i] == 'circle'){
@@ -74,6 +89,7 @@ function checkForWin() {
 
         setTimeout(function(){ //damit die Animation erst 2 sekunden später kommt.
         document.getElementById('game-over').classList.remove('d-none');
+        document.getElementById('restart-btn').classList.remove('d-none');
     }, 1500);
     }
 }

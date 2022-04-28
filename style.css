@@ -130,7 +130,7 @@ tr td:last-child {
 
 .restart-btn {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     border: 1px solid rgba(0, 0, 0, 0.6);
     background-color: rgba(25, 221, 0, 0.2);
     border-radius: 4px;
